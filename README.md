@@ -30,7 +30,7 @@ Vless & Vmess:
 | ------------ | ------------ | ------------ |
 |  PROTOCOL |  vmess<br>vless（可选） |  协议：nginx+vmess+ws+tls或是nginx+vless+ws+tls |
 |  UUID |  [uuid在线生成器](https://www.uuidgenerator.net "uuid在线生成器") | 用户主ID  |
-|  WS_PATH | 默认为`/daochen6` |  路径，请勿使用`/speedtest`，`/`，`/test` 等已经被占用的请求路径 |
+|  WS_PATH | 默认为`/s233` |  路径，请勿使用`/speedtest`，`/`，`/test` 等已经被占用的请求路径 |
 
 ### 进阶
 heorku可以绑卡（应用一直在线，不扣费），绑定域名，套cf，[uptimerobot](https://uptimerobot.com/) 定时访问防止休眠（只监控CF Workers反代地址好了，不然几个账户一起监控没几天就把时间耗完了）
@@ -211,7 +211,7 @@ export default {
 
 ```
   - name: "yourName"
-    type: vmess
+    type: vless
     server: yourName.workers.dev
     port: 443
     uuid: yourUuid
@@ -222,5 +222,5 @@ export default {
     #skip-cert-verify: true
     servername: yourName.workers.dev
     network: ws
-    ws-path: /daochen6
+    ws-path: /s233
 ```
